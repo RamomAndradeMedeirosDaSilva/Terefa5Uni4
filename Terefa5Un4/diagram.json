@@ -1,0 +1,73 @@
+{
+    "version": 1,
+    "author": "Ramom Silva",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": -99.25,
+        "left": -73.25,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": -70.8,
+        "left": -293.8,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": 6,
+        "left": -293.8,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": 54,
+        "left": -293.8,
+        "attrs": { "color": "limegreen" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": -24.55,
+        "left": -231.8,
+        "rotate": 180,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 90.65,
+        "left": -212.6,
+        "rotate": 180,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 42.65,
+        "left": -212.6,
+        "rotate": 180,
+        "attrs": { "value": "330" }
+      }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.1", "led3:C", "black", [ "v-28.8", "h-249.6", "v192" ] ],
+      [ "pico:GND.1", "led1:C", "black", [ "v-28.8", "h-249.6", "v67.2" ] ],
+      [ "pico:GND.1", "led2:C", "black", [ "v-28.8", "h-249.6", "v144" ] ],
+      [ "r1:2", "led1:A", "green", [ "v0", "h-18", "v-96" ] ],
+      [ "r2:2", "led2:A", "green", [ "v0", "h-8.4", "v-48" ] ],
+      [ "r3:2", "led3:A", "green", [ "v0" ] ],
+      [ "r2:1", "pico:GP12", "green", [ "v0", "h9.6", "v48" ] ],
+      [ "r1:1", "pico:GP11", "green", [ "v48", "h96", "v19.2" ] ],
+      [ "r3:1", "pico:GP13", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
