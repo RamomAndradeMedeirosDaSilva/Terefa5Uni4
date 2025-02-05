@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/Terefa5Uni4.uf2'
+elf = 'build/Terefa5Uni4.elf'

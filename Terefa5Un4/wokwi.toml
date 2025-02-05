@@ -1,4 +1,0 @@
-[wokwi]
-version = 1
-firmware = 'build/Terefa5Un4.uf2'
-elf = 'build/Terefa5Un4.elf'
